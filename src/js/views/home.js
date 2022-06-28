@@ -1,11 +1,11 @@
 import React from "react";
-import Cards from "../component/cards"
 import "../../styles/home.css";
+import CharacterList from "../component/characterlist";
 
 export const Home = () => (
 	<div className="container">
 		<div className="row">
-			<Cards />
+			<CharacterList />
 		</div>
 	</div>
 );
