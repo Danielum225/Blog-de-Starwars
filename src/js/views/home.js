@@ -4,8 +4,8 @@ import CharacterList from "../component/characterlist";
 
 export const Home = () => (
 	<div className="container">
-		<div className="row">
+	
 			<CharacterList />
-		</div>
+
 	</div>
 );

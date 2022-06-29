@@ -6,36 +6,43 @@ const CharacterList = () => {
   const { store, actions } = useContext(Context);
 
   return (
-    <div className="container">
-      <div className="row">
-        {store.characters.map((character) => {
-          return (
+    <div className="row">
+      <h2 className="text-danger py-4">Characters</h2>
+      {store.characters.map((character, index) => {
+        return (
+          <div className="col-12 col-md-4 characters">
             <Character
               name={character.name}
               uid={character.uid}
               type={"characters"}
             />
-          );
-        })}
-        {store.planets.map((character) => {
-          return (
+          </div>
+        );
+      })}
+      <h2 className="text-danger py-4">Planets</h2>
+      {store.planets.map((character, index) => {
+        return (
+          <div className="col-12 col-md-4 characters">
             <Character
               name={character.name}
               uid={character.uid}
               type={"planets"}
             />
-          );
-        })}
-        {store.vehicles.map((character) => {
-          return (
+          </div>
+        );
+      })}
+      <h2 className="text-danger py-4">Vehicles</h2>
+      {store.vehicles.map((character, index) => {
+        return (
+          <div className="col-12 col-md-4 characters">
             <Character
               name={character.name}
               uid={character.uid}
               type={"vehicles"}
             />
-          );
-        })}
-      </div>
+          </div>
+        );
+      })}
     </div>
   );
 };

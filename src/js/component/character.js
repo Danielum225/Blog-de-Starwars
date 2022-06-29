@@ -3,7 +3,7 @@ import { PropTypes } from "prop-types";
 
 const Character = (props) => {
   return (
-    <div className="col-12 col-md-4">
+  
       <div className="card">
         <img src={`https://starwars-visualguide.com/assets/img/${props.type}/${props.uid}.jpg`} className="card-img-top" alt="..." />
         <div className="card-body">
@@ -17,7 +17,7 @@ const Character = (props) => {
           </button>
         </div>
       </div>
-    </div>
+  
   );
 };
 

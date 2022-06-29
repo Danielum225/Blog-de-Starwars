@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 export const Navbar = () => {
 	return (
-		<nav className="navbar navbar-light bg-light px-5">
+		<nav className="navbar navbar-light bg-light px-5 py-4">
 		  <div className="container-fluid">
-			<a class="navbar-brand" href="#">
+			<Link class="navbar-brand" to={"/"}>
 			  <img
 				src="https://www.pngplay.com/wp-content/uploads/2/Star-Wars-Logo-Transparent-Images.png"
 				alt=""
@@ -13,7 +13,7 @@ export const Navbar = () => {
 				height="auto"
 				class="d-inline-block align-text-top"
 			  />
-			</a>
+			</Link>
 			<div class="btn-group">
 			  <button
 				type="button"
