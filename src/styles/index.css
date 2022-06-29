@@ -1,12 +1,11 @@
 /* 
     General Styles
 */
-
-  .characters{
-    
-    overflow: auto;
-    overflow-y: hidden;
-    margin: 0 auto;
-    white-space: nowrap
+  .scroll-container {
+    overflow-x: scroll;
+  }
+  .card-img-top {
+    width: 245px;
+    height: 300px;
   }
       

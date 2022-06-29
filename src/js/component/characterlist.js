@@ -8,41 +8,47 @@ const CharacterList = () => {
   return (
     <div className="row">
       <h2 className="text-danger py-4">Characters</h2>
-      {store.characters.map((character, index) => {
-        return (
-          <div className="col-12 col-md-4 characters">
-            <Character
-              name={character.name}
-              uid={character.uid}
-              type={"characters"}
-            />
-          </div>
-        );
-      })}
+      <div className="scroll-container d-flex">
+        {store.characters.map((character, index) => {
+          return (
+            <div className="col-12 col-md-3 px-3 characters">
+              <Character
+                name={character.name}
+                uid={character.uid}
+                type={"characters"}
+              />
+            </div>
+          );
+        })}
+      </div>
       <h2 className="text-danger py-4">Planets</h2>
-      {store.planets.map((character, index) => {
-        return (
-          <div className="col-12 col-md-4 characters">
-            <Character
-              name={character.name}
-              uid={character.uid}
-              type={"planets"}
-            />
-          </div>
-        );
-      })}
+      <div className="scroll-container d-flex">
+        {store.planets.map((character, index) => {
+          return (
+            <div className="col-12 col-md-3 px-3 characters">
+              <Character
+                name={character.name}
+                uid={character.uid}
+                type={"planets"}
+              />
+            </div>
+          );
+        })}
+      </div>
       <h2 className="text-danger py-4">Vehicles</h2>
-      {store.vehicles.map((character, index) => {
-        return (
-          <div className="col-12 col-md-4 characters">
-            <Character
-              name={character.name}
-              uid={character.uid}
-              type={"vehicles"}
-            />
-          </div>
-        );
-      })}
+      <div className="scroll-container d-flex">
+        {store.vehicles.map((character, index) => {
+          return (
+            <div className="col-12 col-md-3 px-3 characters">
+              <Character
+                name={character.name}
+                uid={character.uid}
+                type={"vehicles"}
+              />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
