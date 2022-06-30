@@ -11,7 +11,7 @@ const CharacterList = () => {
       <div className="scroll-container d-flex">
         {store.characters.map((character, index) => {
           return (
-            <div className="col-12 col-md-3 px-3 characters">
+            <div className="col-12 col-md-4 px-3 characters">
               <Character
                 name={character.name}
                 uid={character.uid}
@@ -25,7 +25,7 @@ const CharacterList = () => {
       <div className="scroll-container d-flex">
         {store.planets.map((character, index) => {
           return (
-            <div className="col-12 col-md-3 px-3 characters">
+            <div className="col-12 col-md-4 px-3 characters">
               <Character
                 name={character.name}
                 uid={character.uid}
@@ -39,7 +39,7 @@ const CharacterList = () => {
       <div className="scroll-container d-flex">
         {store.vehicles.map((character, index) => {
           return (
-            <div className="col-12 col-md-3 px-3 characters">
+            <div className="col-12 col-md-4 px-3 characters">
               <Character
                 name={character.name}
                 uid={character.uid}

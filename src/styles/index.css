@@ -5,7 +5,7 @@
     overflow-x: scroll;
   }
   .card-img-top {
-    width: 245px;
-    height: 300px;
+    width: 100%;
+    height: auto;
   }
       
