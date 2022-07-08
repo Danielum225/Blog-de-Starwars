@@ -7,7 +7,7 @@ const Details = () => {
     const params = useParams()
     const [detalle, setDetalle] = useState()
     useEffect(()=>{
-        fetch(`https://www.swapi.tech/api/${detalle.typ}/${params.detailsid}`)
+        fetch(`https://www.swapi.tech/api/${params.detailsid}`)
         .then(response=>response.json())
         .then(response=>setDetalle(response))
     },[])

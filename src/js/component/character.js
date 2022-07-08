@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { Context } from "../store/appContext";
 import { PropTypes } from "prop-types";
+import { Link } from "react-router-dom";
+import Details from "../views/details";
 
 const Character = (props) => {
+
+  const { store, actions } = useContext(Context);
   return (
   
       <div className="card">
@@ -10,10 +15,8 @@ const Character = (props) => {
           <h5 className="card-title">{props.name}</h5>
           <p className="card-text"></p>
           <div className="card-body d-flex justify-content-between">
-          <a href="#" className="btn btn-outline-primary">
-            Learn more!
-          </a>
-          <button type="button" className="btn btn-outline-warning">
+          <Link to={`details/${props.uid}`} className="btn btn-primary mt-2">Read more</Link>
+          <button onClick={() => actions.addFavorites(props.name)}  className="btn btn-outline-warning">
             <i className="far fa-heart"></i>
           </button>
           </div>
@@ -24,6 +27,7 @@ const Character = (props) => {
 };
 
 Character.propTypes = {
+ 
   uid: PropTypes.string,
   name: PropTypes.string,
   type: PropTypes.string,
