@@ -16,6 +16,7 @@ const CharacterList = () => {
                 name={character.name}
                 uid={character.uid}
                 type={"characters"}
+                category={"people"}
               />
             </div>
           );
@@ -30,6 +31,7 @@ const CharacterList = () => {
                 name={character.name}
                 uid={character.uid}
                 type={"planets"}
+                category={"planets"}
               />
             </div>
           );
@@ -44,6 +46,7 @@ const CharacterList = () => {
                 name={character.name}
                 uid={character.uid}
                 type={"vehicles"}
+                category={"vehicles"}
               />
             </div>
           );

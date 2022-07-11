@@ -15,7 +15,7 @@ const Character = (props) => {
           <h5 className="card-title">{props.name}</h5>
           <p className="card-text"></p>
           <div className="card-body d-flex justify-content-between">
-          <Link to={`details/${props.uid}`} className="btn btn-primary mt-2">Read more</Link>
+          <Link to={`details/${props.category}/${props.uid}`} className="btn btn-primary mt-2">Read more</Link>
           <button onClick={() => actions.addFavorites(props.name)}  className="btn btn-outline-warning">
             <i className="far fa-heart"></i>
           </button>
@@ -31,6 +31,7 @@ Character.propTypes = {
   uid: PropTypes.string,
   name: PropTypes.string,
   type: PropTypes.string,
+  category: PropTypes.string,
 
  
 };

@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Detail = (props) => {
+  
   return (
     <div className="card mb-3">
       <div className="row no-gutters">
@@ -13,10 +14,11 @@ const Detail = (props) => {
             <h5 className="card-title">{props.name}</h5>
             <p>{props.description}</p>
             <ul>
-              <li>a</li>
-              <li>b</li>
-              <li>c</li>
-              <li>d</li>
+              {
+                Object.keys(props.properties).map((element, index) =>{
+                  return <li key={index}>{element}: {props.properties[element]}</li>
+                })
+              }
             </ul>
           </div>
         </div>
@@ -32,6 +34,7 @@ Detail.propTypes = {
   name: PropTypes.string,
   type: PropTypes.string,
   description: PropTypes.string,
+  properties: PropTypes.object,
   
 };
 export default Detail;

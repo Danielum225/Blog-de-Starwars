@@ -7,9 +7,9 @@ const Details = () => {
     const params = useParams()
     const [detalle, setDetalle] = useState()
     useEffect(()=>{
-        fetch(`https://www.swapi.tech/api/${params.detailsid}`)
+        fetch(`https://www.swapi.tech/api/${params.category}/${params.detailsid}`)
         .then(response=>response.json())
-        .then(response=>setDetalle(response))
+        .then(response=>setDetalle(response.result))
     },[])
 
   return (
@@ -19,7 +19,7 @@ const Details = () => {
           {
             detalle ? 
             <Detail
-            image={detalle.image} name={detalle.name} description={detalle.gender} type={detalle.type}
+            uid={detalle.uid} name={detalle.properties.name} description={detalle.description} type={params.category == "people" ? "characters" : params.category} properties={detalle.properties}
              /> : ""
           }
             
