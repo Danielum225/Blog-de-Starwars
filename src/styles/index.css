@@ -8,4 +8,25 @@
     width: 100%;
     height: auto;
   }
+  .footer{
+    height: 150px;
+    width: auto;
+    background-image: url("https://www.giantfreakinrobot.com/wp-content/uploads/2020/10/darth-vader-feature-900x506.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150px; 
+}
+.navbar{
+  height: 150px;
+}
+.card-img{
+  height: 100%;
+  width: 90%;
+}
+
+
+
+    
+
+  
       

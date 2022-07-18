@@ -14,14 +14,14 @@ const Character = (props) => {
   }
   return (
   
-      <div className="card">
+      <div className="card border-0">
         <img src={`https://starwars-visualguide.com/assets/img/${props.type}/${props.uid}.jpg`} className="card-img-top rounded mx-auto d-block" alt="..." />
         <div className="card-body">
           <h5 className="card-title">{props.name}</h5>
           <p className="card-text"></p>
           <div className="card-body d-flex justify-content-between">
-          <Link to={`details/${props.category}/${props.uid}`} className="btn btn-primary mt-2">Read more</Link>
-          <button onClick={(handleClick)}  className={ Click === true ? " btn btn-warning" : " btn btn-outline-warning" }>
+          <Link to={`details/${props.category}/${props.uid}`} className="btn btn-dark mt-2">Read more</Link>
+          <button onClick={(handleClick)}  className={ Click === true ? "btn btn-danger border-0" : " btn btn-outline-danger border-0" }>
             <i className="far fa-heart"></i>
           </button>
           </div>

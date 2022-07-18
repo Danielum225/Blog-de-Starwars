@@ -4,14 +4,14 @@ import PropTypes from "prop-types";
 const Detail = (props) => {
   
   return (
-    <div className="card mb-3">
-      <div className="row no-gutters">
-        <div className="col-md-4">
+    <div className="card rounded m-4 border-0">
+      <div className="row no-gutter">
+        <div className="col-md-6">
           <img src={`https://starwars-visualguide.com/assets/img/${props.type}/${props.uid}.jpg`}className="card-img" alt="..." />
         </div>
-        <div className="col-md-8">
+        <div className="col-md-6">
           <div className="card-body">
-            <h5 className="card-title">{props.name}</h5>
+            <h3 className="card-title pt-5">{props.name}</h3>
             <p>{props.description}</p>
             <ul>
               {
