@@ -1,5 +1,6 @@
 const getState = ({ getStore, getActions, setStore }) => {
   return {
+    
     store: {
       demo: [
         {
@@ -13,9 +14,15 @@ const getState = ({ getStore, getActions, setStore }) => {
           initial: "white",
         },
       ],
+
+
       characters: [],
 	    planets: [],
 	    vehicles: [],
+      favorites: [],
+
+
+    
     },
     actions: {
       // Use getActions to call a function within a fuction
@@ -36,6 +43,23 @@ const getState = ({ getStore, getActions, setStore }) => {
         fetch("https://www.swapi.tech/api/vehicles/")
           .then((response) => response.json())
           .then((data) => setStore({ vehicles: data.results }));
+      },
+
+      addFavorites: (item) => {
+
+        const store = getStore();
+
+        setStore({ favorites: [...store.favorites, item] });
+
+      },
+
+      deleteFavorites: (index) => {
+
+        const store = getStore();
+
+        setStore({ favorites: store.favorites.filter((favorites, i) => i !== index)})
+
+
       },
 
       changeColor: (index, color) => {

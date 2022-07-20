@@ -6,33 +6,49 @@ const CharacterList = () => {
   const { store, actions } = useContext(Context);
 
   return (
-    <div className="container">
-      <div className="row">
-        {store.characters.map((character) => {
+    <div className="row">
+      <h2 className="text-light py-4">Characters</h2>
+      <div className="scroll-container d-flex">
+        {store.characters.map((character, index) => {
           return (
-            <Character
-              name={character.name}
-              uid={character.uid}
-              type={"characters"}
-            />
+            <div className="col-12 col-md-3 px-3 characters">
+              <Character
+                name={character.name}
+                uid={character.uid}
+                type={"characters"}
+                category={"people"}
+              />
+            </div>
           );
         })}
-        {store.planets.map((character) => {
+      </div>
+      <h2 className="text-light py-4">Planets</h2>
+      <div className="scroll-container d-flex">
+        {store.planets.map((character, index) => {
           return (
-            <Character
-              name={character.name}
-              uid={character.uid}
-              type={"planets"}
-            />
+            <div className="col-12 col-md-3 px-3 characters">
+              <Character
+                name={character.name}
+                uid={character.uid}
+                type={"planets"}
+                category={"planets"}
+              />
+            </div>
           );
         })}
-        {store.vehicles.map((character) => {
+      </div>
+      <h2 className="text-light py-4">Vehicles</h2>
+      <div className="scroll-container d-flex">
+        {store.vehicles.map((character, index) => {
           return (
-            <Character
-              name={character.name}
-              uid={character.uid}
-              type={"vehicles"}
-            />
+            <div className="col-12 col-md-3 px-3 mb-3">
+              <Character
+                name={character.name}
+                uid={character.uid}
+                type={"vehicles"}
+                category={"vehicles"}
+              />
+            </div>
           );
         })}
       </div>
